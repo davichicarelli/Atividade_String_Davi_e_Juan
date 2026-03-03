@@ -7,16 +7,16 @@ $frase = $_POST["frase"];
 
 echo "<h1>Resultado:</h1>";
 
-// 1️⃣ Nome formatado (minúsculo + primeira letra maiúscula)
+// 1️- Nome formatado (minúsculo + primeira letra maiúscula)
 $nome = strtolower($nome);
 $nomeFormatado = ucfirst($nome);
 echo "Nome formatado: ".$nomeFormatado."<br>";
 
-// 2️⃣ Quantidade de caracteres
+// 2️- Quantidade de caracteres
 $totalCaracteres = strlen($nome);
 echo "Total de caracteres do seu nome: ".$totalCaracteres."<br>";
 
-// 3️⃣ Primeiro nome
+// 3️- Primeiro nome
 $posicaoEspaco = strpos($nome, " ");
 
 if($posicaoEspaco !== false){
@@ -27,22 +27,22 @@ if($posicaoEspaco !== false){
 
 echo "Primeiro nome: ".$primeiroNome."<br>";
 
-// 4️⃣ Verificar email
+// 4️- Verificar email
 if(strpos($email,"@") !== false){
     echo "Email válido!<br>";
 }else{
     echo "Email inválido<br>";
 }
 
-// 5️⃣ Substituir "programação" por "tecnologia"
+// 5️- Substituir "programação" por "tecnologia"
 $fraseModificada = str_replace("programação","tecnologia",$frase);
 echo "Frase modificada: ".$fraseModificada."<br>";
 
-// 6️⃣ Frase invertida
+// 6️- Frase invertida
 $fraseInvertida = strrev($frase);
 echo "Frase invertida: ".$fraseInvertida."<br>";
 
-// 7️⃣ Comparar se primeiro nome é "admin"
+// 7️- Comparar se primeiro nome é "admin"
 $resultadoComparacao = strcmp(strtolower($primeiroNome),"admin");
 
 if($resultadoComparacao == 0){
@@ -53,22 +53,22 @@ if($resultadoComparacao == 0){
 
 echo "<h1>Atividade Extra:</h1>";
 
-//  1️⃣ Nome em MAIÚSCULO
+//  1️- Nome em MAIÚSCULO
 $nomeMaiusculo = strtoupper($nome);
 echo "Nome em maiúsculo: ".$nomeMaiusculo."<br>";
 
 
-//  2️⃣ Apenas os 10 primeiros caracteres da frase
+//  2️- Apenas os 10 primeiros caracteres da frase
 $primeiros10 = substr($frase, 0, 10);
 echo "Primeiros 10 caracteres da frase: ".$primeiros10."<br>";
 
 
-//  3️⃣ Repetir a frase 3 vezes
+//  3️- Repetir a frase 3 vezes
 $fraseRepetida = str_repeat($frase." ", 3);
 echo "Frase repetida 3 vezes: ".$fraseRepetida."<br>";
 
 
-//  4️⃣ Contar quantas vezes aparece a letra "a"
+//  4️- Contar quantas vezes aparece a letra "a"
 $quantidadeA = substr_count(strtolower($frase), "a");
 echo "Quantidade de letras 'a' na frase: ".$quantidadeA."<br>";
 
